@@ -1,0 +1,43 @@
+####	CREATING STUDENT TABLE	 ####
+
+create table student ( rollNo INT not null , firstName TEXT(20) not null, lastName TEXT(20) not null , emailId TEXT(50) not null, CONSTRAINT pkc_student Primary Key  (rollNo) );
+
+
+#### Write a trigger to ensure that emailId is not repeated ####
+	
+
+
+#### TRIGGERS ARE DATABASE CALLABLE FUNCTIONS,
+#### that are automatically called/invoked when a specified event occurs ON [SPECIFIED TABLE]
+
+
+
+#### EVENTS:
+		AFTER  INSERT
+		AFTER  UPDATE
+		AFTER  DELETE
+ 
+		BEFORE  INSERT
+		BEFORE  UPDATE
+		BEFORE  DELETE
+
+
+
+#### SYNTAX FOR CREATING TRIGGER (BASIC):
+		
+		CREATE TRIGGER [trigger_name] EVENT_FROM_ABOVE_EVENTS ON  [table_name]
+		BEGIN
+			---
+			---
+			---
+		END;
+
+#### FOR FULL POSIBLE SYNTAX AND MORE REFERENCE YOU MAYFOLLOW BELOW LINK IF YOU WANT  ####
+
+https://sqlite.org/lang_createtrigger.html
+
+
+
+#### Currently being inserted row canbe referred by 'New' Object,
+#### and Columns canbe accessed as New.column_name
+
